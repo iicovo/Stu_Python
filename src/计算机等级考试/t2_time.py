@@ -1,7 +1,12 @@
 # encoding:utf-8
-import turtle
-import random
 import time
-import jieba
-import wordcloud
 
+# 生成
+t = time.time()
+print(t)
+
+# 程序执行延迟 秒
+time.sleep(2)
+
+#
+time.clock()
