@@ -1,0 +1,21 @@
+# encoding:utf-8
+import requests
+#34739347
+count = input("url id: ")
+
+url_download = "http://music.163.com/song/media/outer/url?id=" + str(count)
+headers = {
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36",
+}
+res = requests.get(url_download, headers=headers)
+fname = input("name: ")
+filename = fname + '.mp3'
+try:
+    with open(filename, "wb") as f:
+        f.write(res.content)
+except Exception:
+    filename = "未命名歌曲" + count + '.mp3'
+    print('*' * 10 + '歌曲名异常' + '*' * 10)
+    with open(filename, "wb") as f:
+        f.write(res.content)
+print(fname + ": 下载成功!")
