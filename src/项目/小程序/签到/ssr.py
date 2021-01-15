@@ -4,7 +4,7 @@ from selenium import webdriver
 import requests
 
 
-class run_program:
+class Clock_in:
 
     def __init__(self):
         self.user = "599520857@qq.com"
@@ -15,7 +15,7 @@ class run_program:
         for i in range(len(urls)):
             req = requests.get(urls[i])
             if req.status_code == 200:
-                run_program.Qian_dao(self, urls[i])
+                Clock_in.Qian_dao(self, urls[i])
 
     def Qian_dao(self, url):
         # options = webdriver.ChromeOptions()
@@ -51,9 +51,9 @@ class run_program:
         driver.quit()
 
     def main(self):
-        run_program.get_url(self)
+        Clock_in.get_url(self)
 
 
 if __name__ == '__main__':
-    run = run_program()
+    run = Clock_in()
     run.main()
