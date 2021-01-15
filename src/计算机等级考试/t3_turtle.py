@@ -27,4 +27,20 @@ import turtle as t
 # t.pencolor()  # 设置画笔颜色
 
 
+""" 蟒蛇绘制 """
+t.setup(650, 350, 200, 200)
+t.pu()
+t.fd(-250)
+t.pd()
+t.pensize(25)
+t.pencolor("purple")  # 画笔颜色改为紫色
+t.seth(-40)  # 绝对角度
+for i in range(4):
+    t.circle(40, 80)
+    t.circle(-40, 80)
+t.circle(40, 80 / 2)
+t.fd(40)
+t.circle(16, 180)
+t.fd(40 * 2 / 3)
+
 t.done()

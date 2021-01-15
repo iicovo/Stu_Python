@@ -1,8 +1,19 @@
 # encoding:utf-8
-import random
+import random  # 随机数生成库
+
+""" 扩展随机数函数 """
+
+# randint(a,b) 生成[a,b]之间的整数
+# randrange(n,m [,k]) 生成[n,m)之间 步长为k的整数
+# choice() 随机选择序列中的一个元素
+# shuffle() 将序列元素随机排列，返回打乱后的元素序列
+# getrandbits(k) 生成一个k比特长的随机数
+# uniform(a,b) 生成[a，b]之间的随机 小数
 
 
-# 随机生成 0~1 之间的随机数
+""" 简单使用 """
+
+# 随机生成 0 ~ 1.0 之间的随机数
 r = random.random()
 print(r)
 

@@ -1,7 +1,15 @@
 # encoding:utf-8
-import jieba
+import jieba  # 中文分词
 
-# 分词
-jb = jieba.cut("大家好，我是结巴！")
-print(list(jb))
+""" 分词模式 """
+# - 精确模式：把文本精确的且分开，不存在冗余
+# - 全模式：把文本中所有可能的词语都扫描出来，有冗余
+# - 搜索引擎模式：在精确模式基础上，对长词再次切分
 
+""" 常用函数 """
+jieba.lcut("中国是一个伟大的国家")  # 精确模式，返回列表类型的分词结果
+jieba.lcut("中国是一个伟大的国家", cut_all=True)  # 全模式，返回列表类型的分词结果，存在冗余
+jieba.lcut_for_search("中国是一个伟大的国家")  # 搜索引擎模式
+
+""" 增加新词 """
+jieba.add_word("Python语言")
