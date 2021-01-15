@@ -11,11 +11,12 @@ class Clock_in:
         self.pwd = "kkk00000"
 
     def get_url(self):
-        urls = ["https://xxjc.pro", "https://xxjc.vip"]
+        urls = ["https://xxjc.pro", "https://xxjc.vip", "https://xxjc.host"]
         for i in range(len(urls)):
             req = requests.get(urls[i])
             if req.status_code == 200:
                 Clock_in.Qian_dao(self, urls[i])
+                break
 
     def Qian_dao(self, url):
         # options = webdriver.ChromeOptions()
