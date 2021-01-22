@@ -34,7 +34,7 @@ class Clock_in:
             driver.find_element_by_xpath('//*[@id="login"]').click()
             time.sleep(2)
 
-            # 签到
+            # 打卡签到
             try:
                 driver.find_element_by_xpath('//*[@id="checkin"]').click()
                 print('签到成功!')
