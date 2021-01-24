@@ -32,6 +32,7 @@ def image_scan():
     get_click('Work.png')  # 进入工作界面
     get_click('click.png')  # 进入健康返校打卡界面
     get_click('write.png')  # 进入未填写表
+    time.sleep(3)
     pa.scroll(-1000)  # 向下滚动页面
     get_click('finish.png')  # 提交
 
